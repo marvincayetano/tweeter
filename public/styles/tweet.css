@@ -1,0 +1,56 @@
+.tweet-container {
+  min-height: 300px;
+  border: 4px solid #4056a1;
+  margin: 40px 0;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.tweet-container:hover {
+  -webkit-box-shadow: 6px 6px 3px 2px rgba(255, 175, 51, 0.75);
+  box-shadow: 6px 6px 3px 2px rgba(255, 175, 51, 0.75);
+}
+
+.tweet-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.tweet-header .tweet-tag {
+  font-size: 1.7rem;
+  color: gray;
+}
+
+.tweet-description {
+  padding-left: 20px;
+  font-weight: 500;
+}
+
+.tweet-footer {
+  display: flex;
+  justify-content: space-between;
+  border-top: 4px solid #4056a1;
+  padding: 15px;
+  font-size: 20px;
+}
+
+.fas:hover {
+  color: burlywood;
+  cursor: pointer;
+}
+
+.tweet-footer .tweet-icons {
+  display: flex;
+  gap: 14px;
+}
+
+.tweet-footer .tweet-icons .tweet-icon-heart {
+  display: flex;
+}
+
+.tweet-footer .tweet-icons .tweet-icon-heart span {
+  font-size: 15px;
+}
