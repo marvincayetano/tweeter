@@ -3,10 +3,14 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
+
+// Loop through an array of tweets then returning array of elements
 function renderTweets(tweetArr) {
   return (tweetArr.map(tweet => createTweetElement(tweet))).reverse();;
 }
 
+
+// Creates a single element using a literal string for the component
 function createTweetElement(tweetObj) {
   return  `
   <article class="tweet-container">
@@ -36,6 +40,7 @@ function createTweetElement(tweetObj) {
   `;
 }
 
+// Creates an element with error message
 function createError(message) {
   return `
           <div class="tweet-error">

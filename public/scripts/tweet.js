@@ -1,5 +1,8 @@
 $(document).ready(function() {
+  let length;
+  let showValue;
 
+  // Character counter checks if the length is more that 140
   $('#tweet-text').on('input', function() {
     length = this.value.length;
 
