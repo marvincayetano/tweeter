@@ -4,6 +4,10 @@
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
 
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
     <!-- External CSS -->
     <link
       rel="stylesheet"
@@ -54,64 +58,41 @@
     <nav>
       <span>tweeter</span>
       <div>
-        <div><span>Write</span> a new tweet</div>
-        <span style="color: tomato">
+        <p class="write-newTweet"><span>Write</span> a new tweet</p>
+        <a href="#main" style="color: tomato">
           <i class="fas fa-angle-double-down"></i>
-        </span>
+        </a>
       </div>
     </nav>
 
-    <header class="header">
-      <div>
-        <img src="/images/profile-hex.png" />
-      </div>
-      <br />
-      <div>
-        <h2>Marvin Cayetano</h2>
-      </div>
-    </header>
+    <div class="main-container">
+      <header class="header">
+        <div>
+          <img src="/images/profile-hex.png" />
+        </div>
+        <br />
+        <div>
+          <h3 class="tweet-name"><span>Marvin </span>Cayetano</h3>
+        </div>
+      </header>
 
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-      <section class="new-tweet">
-        <h2>Compose Tweet</h2>
-        <div class="error"></div>
-        <form id="formNewTweet">
-          <label for="tweet-text">What are you humming about?</label>
-          <textarea name="text" id="tweet-text"></textarea>
-          <div>
-            <button type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
-          </div>
-        </form>
-      </section>
-
-      <article class="tweet-container">
-        <header class="tweet-header">
-          <div>
-            <i class="far fa-user"></i>
-            <span>Newton</span>
-          </div>
-
-          <span class="tweet-tag">@Newton</span>
-        </header>
-        <h4 class="tweet-description">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-          luctus ex at tortor gravida, sit amet viverra tellus lacinia.
-          Pellentesque ac lorem luctus, eleifend mauris vitae, porta lorem.
-        </h4>
-        <footer class="tweet-footer">
-          <span>10 days ago</span>
-          <div class="tweet-icons">
-            <i class="fas fa-flag"></i>
-            <i class="fas fa-retweet"></i>
-            <div class="tweet-icon-heart">
-              <i class="fas fa-heart"></i>
-              <span>1</span>
+      <!-- Page-specific (main) content here -->
+      <main id="main" class="container">
+        <section class="new-tweet">
+          <h2>Compose Tweet</h2>
+          <div class="error"></div>
+          <form id="formNewTweet">
+            <label for="tweet-text">What are you humming about?</label>
+            <textarea name="text" id="tweet-text"></textarea>
+            <div>
+              <button type="submit">Tweet</button>
+              <output name="counter" class="counter" for="tweet-text"
+                >140</output
+              >
             </div>
-          </div>
-        </footer>
-      </article>
-    </main>
+          </form>
+        </section>
+      </main>
+    </div>
   </body>
 </html>

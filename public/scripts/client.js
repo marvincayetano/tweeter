@@ -4,7 +4,7 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 function renderTweets(tweetArr) {
-  return tweetArr.map(tweet => createTweetElement(tweet));
+  return (tweetArr.map(tweet => createTweetElement(tweet))).reverse();;
 }
 
 function createTweetElement(tweetObj) {
@@ -49,28 +49,38 @@ function createError(message) {
 $(function() {
   $("#formNewTweet").submit(function(e) {
     e.preventDefault();
-    const { value }= e.target.text;
+    const { value } = e.target.text;
 
     // Append error here
     $(".error").empty();
 
     if(value.trim() === "") {
       $(".error").append(createError("Cannot tweet empty humming."))
+      $(".tweet-error").slideUp();
+      $(".tweet-error").slideDown();
       return;
     } else if(value.length > 140) {
-      $(".error").append(createError("That humming is way too long."))
+      $(".error").append(createError("That humming is way too long. Only 140 humming characters are allowed!"))
+      $(".tweet-error").slideUp();
+      $(".tweet-error").slideDown();
       return;
     }
 
-    // $.ajax({
-    //        type: "POST",
-    //        data: e.target.text.serialize(),
-    //        success: function(data) {
-    //          console.log(data)
-    //        }
-    //      });
+    const safeHTML = `text=${escape(value)}`;
+
+    $.post("/tweets", safeHTML, function(){
+      $("article").remove();
+      loadTweets();
+      $("#tweet-text").val('');
+      $(".counter").text('140');
+    });
   });
 
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
 
   function loadTweets() {
     $.get('/tweets').then(data => {

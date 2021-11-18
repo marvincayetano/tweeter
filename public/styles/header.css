@@ -1,6 +1,43 @@
+@media only screen and (min-width: 768px) {
+  /* 768 to up */
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  .header {
+    width: 100%;
+    margin: 0;
+  }
+
+  main {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  /* 1024 to up */
+  .main-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 120px;
+    padding-top: 120px;
+  }
+
+  .header {
+    width: 33.33%;
+    margin: 50px;
+  }
+
+  main {
+    width: 66.6%;
+  }
+}
+
 .header {
   height: 400px;
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,5 +45,12 @@
   background-color: #decc00;
   background-image: url("https://www.transparenttextures.com/patterns/axiom-pattern.png");
   /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
-  margin-top: 120px;
+}
+
+.tweet-name span {
+  font-family: "Bungee", sans-serif;
+}
+
+.tweet-name {
+  color: white;
 }

@@ -28,8 +28,8 @@ nav span {
 }
 
 main {
-  width: 90%;
   margin: auto;
+  padding: 50px;
 }
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
