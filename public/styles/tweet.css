@@ -29,6 +29,12 @@
   font-weight: 500;
 }
 
+.tweet-avatar {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
 .tweet-footer {
   display: flex;
   justify-content: space-between;

@@ -15,8 +15,8 @@ function createTweetElement(tweetObj) {
   return  `
   <article class="tweet-container">
         <header class="tweet-header">
-          <div>
-            <img src="${tweetObj["user"]["avatars"]}" alt="" />
+          <div class="tweet-avatar">
+            <img src="${tweetObj["user"]["avatars"]}" alt="User image" />
             <span>${tweetObj["user"]["name"]}</span>
           </div>
 
